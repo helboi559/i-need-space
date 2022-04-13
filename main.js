@@ -7,14 +7,14 @@
 let searchBtn = document.querySelector('#search');
 // console.log(searchBtn)
 let addressBox = document.querySelector('#address');
-let apiKey = document.querySelector('#api-key');
+
 let satelliteBox = document.querySelector('#norad')
 let displayInfo = document.querySelector('#display')
 //search btn event listener
 searchBtn.addEventListener('click', () => {
     // console.log(encoded.value)
     //fetch input location w/ api key
-    fetch(encodeURI(`https://api.mapbox.com/geocoding/v5/mapbox.places/${addressBox.value}.json?access_token=${apiKey.value}`))
+    fetch(encodeURI(`https://api.mapbox.com/geocoding/v5/mapbox.places/${addressBox.value}.json?access_token=${apiKey}`))
         .then(res => res.json())
         .then(data => {
             //get coordinates 
