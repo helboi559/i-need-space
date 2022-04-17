@@ -14,7 +14,7 @@ let displayInfo = document.querySelector('#display')
 searchBtn.addEventListener('click', () => {
     // console.log(encoded.value)
     //fetch input location w/ api key
-    fetch(encodeURI(`https://api.mapbox.com/geocoding/v5/mapbox.places/${addressBox.value}.json?access_token=${apiKey}`))
+    fetch(encodeURI(`https://api.mapbox.com/geocoding/v5/mapbox.places/${addressBox.value}.json?access_token=${apiKey.value}`))
         .then(res => res.json())
         .then(data => {
             //get coordinates 
